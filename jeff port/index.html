@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geofrey Waithaka Portfolio</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script>document.documentElement.classList.add("js");</script>
+</head>
+
+<body>
+
+    <!-- ANIMATED BACKGROUND -->
+    <canvas id="bg-canvas" aria-hidden="true"></canvas>
+
+    <!-- NAVBAR -->
+    <header>
+        <a href="#home" class="logo">Geofrey Waithaka</a>
+
+        <nav>
+            <a href="#home">Home</a>
+
+            <div class="menu">
+                <button type="button" class="menu-btn" id="menu-btn"
+                        aria-expanded="false" aria-controls="menu-list">
+                    <i class="fa-solid fa-bars"></i> Menu
+                </button>
+
+                <div class="menu-list" id="menu-list">
+                    <a href="#services">Services</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#skills">Skills</a>
+                    <a href="#passion">Passion</a>
+                    <a href="#contact">Contact</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section id="home" class="hero page">
+
+        <!-- LEFT -->
+        <div class="hero-text">
+
+            <h1>
+                Welcome to <br>
+                my portfolio
+            </h1>
+
+            <div class="typing-line" aria-label="Web Developer, Python Programmer, AI Enthusiast">
+                <span class="prompt">&gt;</span> <span id="typed"></span><span class="caret"></span>
+            </div>
+
+            <p>
+                I am a computer scientist with a passion for
+                web development, Python and AI.
+            </p>
+
+            <div class="buttons">
+                <a href="#contact" class="contact-btn">Contact Me</a>
+                <a href="#services" class="hire-btn">My Services</a>
+                <a href="Geofrey_Waithaka_CV.docx" class="hire-btn" download>
+                    <i class="fa-solid fa-download"></i> Download CV
+                </a>
+            </div>
+
+            <!-- SOCIALS -->
+            <div class="socials">
+                <a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Facebook">
+                    <i class="fab fa-facebook"></i>
+                </a>
+
+                <a href="https://instagram.com/waithaka796" target="_blank" rel="noopener" aria-label="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+
+                <a href="https://wa.me/254115430100" target="_blank" rel="noopener" aria-label="WhatsApp">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+
+                <a href="https://linkedin.com" target="_blank" rel="noopener" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+            </div>
+
+        </div>
+
+        <!-- RIGHT -->
+        <div class="hero-image">
+            <div class="circle"></div>
+            <img src="profile.jpg" alt="Geofrey Waithaka">
+        </div>
+
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services" class="services-section page section-page">
+
+        <h2>My Services</h2>
+
+        <div class="service-box">
+            <h3>Website Development</h3>
+            <p>I create modern and responsive websites.</p>
+        </div>
+
+        <div class="service-box">
+            <h3>Python Programming</h3>
+            <p>I develop Python projects and AI applications.</p>
+        </div>
+
+        <div class="service-box">
+            <h3>Graphic Design</h3>
+            <p>I create posters, logos and business graphics.</p>
+        </div>
+
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="projects-section page section-page">
+
+        <h2>My Projects</h2>
+
+        <!--
+            To add a screenshot, save it in the "images" folder using the
+            file name shown in each project below. Until then, an icon shows.
+        -->
+
+        <div class="project">
+            <div class="thumb">
+                <i class="fa-solid fa-store"></i>
+                <img src="images/business-assistant.jpg" alt="AI Business Assistant screenshot" onerror="this.remove()">
+            </div>
+            <div class="project-info">
+                <h3>AI Business Assistant &amp; Small Business System</h3>
+                <p>
+                    A web system for small businesses in Kenya such as shops, salons and
+                    restaurants. It handles sales, stock, expenses, customers, debts and
+                    reports, and has an &ldquo;Ask My Business&rdquo; assistant, with separate
+                    admin and staff roles.
+                </p>
+                <span class="tags"><b>PHP</b><b>MySQL</b><b>JavaScript</b><b>Bootstrap</b></span>
+            </div>
+        </div>
+
+        <div class="project">
+            <div class="thumb">
+                <i class="fa-solid fa-school"></i>
+                <img src="images/school-system.jpg" alt="School Management System screenshot" onerror="this.remove()">
+            </div>
+            <div class="project-info">
+                <h3>School Management System</h3>
+                <p>
+                    The secretary registers students, teachers enter marks for each
+                    subject, and students and parents log in to their own portals to see results.
+                </p>
+                <span class="tags"><b>PHP</b><b>MySQL</b></span>
+            </div>
+        </div>
+
+        <div class="project">
+            <div class="thumb">
+                <i class="fa-solid fa-wheat-awn"></i>
+                <img src="images/riri-feeds-server.jpg" alt="Riri Feeds Server screenshot" onerror="this.remove()">
+            </div>
+            <div class="project-info">
+                <h3>Riri Feeds Server</h3>
+                <p>
+                    A system for a feeds business that tracks sales and stock, has user login
+                    with admin control, and produces downloadable reports with the
+                    company branding.
+                </p>
+                <span class="tags"><b>Python</b><b>Flask</b></span>
+            </div>
+        </div>
+
+        <div class="project">
+            <div class="thumb">
+                <i class="fa-solid fa-palette"></i>
+                <img src="images/riri-feeds-posters.jpg" alt="Riri Feeds poster" onerror="this.remove()">
+            </div>
+            <div class="project-info">
+                <h3>Riri Feeds Product Posters</h3>
+                <p>
+                    Promotional posters for Riri Feeds products, made from the company&rsquo;s own
+                    product photos.
+                </p>
+                <span class="tags"><b>Graphic Design</b></span>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="skills-section page section-page">
+
+        <h2>My Skills</h2>
+
+        <div class="skills-grid">
+
+            <div class="skill-group">
+                <h3>Programming</h3>
+                <span class="tags"><b>Python</b><b>Java</b><b>PHP</b></span>
+            </div>
+
+            <div class="skill-group">
+                <h3>Web</h3>
+                <span class="tags"><b>HTML</b><b>CSS</b><b>JavaScript</b><b>Bootstrap</b></span>
+            </div>
+
+            <div class="skill-group">
+                <h3>Databases</h3>
+                <span class="tags"><b>MySQL</b><b>Database management</b></span>
+            </div>
+
+            <div class="skill-group">
+                <h3>IT &amp; Systems</h3>
+                <span class="tags"><b>Networking</b><b>Systems administration</b><b>Software installation</b><b>Troubleshooting</b><b>Windows</b></span>
+            </div>
+
+            <div class="skill-group">
+                <h3>Creative</h3>
+                <span class="tags"><b>Video editing</b><b>Videography</b><b>Graphic design</b></span>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- PASSION -->
+    <section id="passion" class="passion-section page section-page">
+
+        <h2>My Passion</h2>
+
+        <div class="passion-box">
+
+            <p>
+                I believe good work starts with listening. Before I write a single line of
+                code or design a poster, I like to understand how the customer&rsquo;s business
+                really runs: what they sell, who works with them, and what slows them down
+                every day. I build for small businesses, so I keep things simple, explain
+                in plain language, and never make anyone feel lost because of technical words.
+            </p>
+
+            <p>
+                For me the relationship does not end when the work is delivered. I am honest
+                about what can be done and how long it will take, I make time when someone needs
+                help, and I keep improving a system until it truly works for them. My time in
+                IT support at Kenyatta University taught me patience, and how much it means to a
+                person when their problem is fixed with respect. I want every customer to feel
+                they can call me, trust me and come back.
+            </p>
+
+        </div>
+
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="contact-section page section-page">
+
+        <h2>Contact Me</h2>
+
+        <p>Email: <a href="mailto:jeffwaithaka802@gmail.com">jeffwaithaka802@gmail.com</a></p>
+        <p>Phone: <a href="tel:+254115430100">+254115430100</a></p>
+        <p>Location: Nairobi, Kenya</p>
+
+        <!--
+            This form sends the message to your email through Formspree.
+            Replace YOUR_FORM_ID below with the ID from your Formspree form.
+        -->
+        <form id="contact-form" class="contact-form"
+              action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+
+            <label for="name">Your name</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Your email</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="6" required></textarea>
+
+            <button type="submit" class="contact-btn">Send message</button>
+
+            <p id="form-status" role="status" aria-live="polite"></p>
+        </form>
+
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Geofrey Waithaka | All Rights Reserved</p>
+    </footer>
+
+    <script src="bg.js"></script>
+
+    <script>
+        /* Menu and page switching: each section opens on its own */
+        (function () {
+            var pageNames = ["home", "services", "projects", "skills", "passion", "contact"];
+            var menuBtn = document.getElementById("menu-btn");
+            var menuList = document.getElementById("menu-list");
+
+            function closeMenu() {
+                menuList.classList.remove("open");
+                menuBtn.setAttribute("aria-expanded", "false");
+            }
+
+            function showPage() {
+                var name = location.hash.replace("#", "");
+                if (pageNames.indexOf(name) === -1) { name = "home"; }
+
+                document.querySelectorAll(".page").forEach(function (el) {
+                    el.classList.toggle("active", el.id === name);
+                });
+
+                document.querySelectorAll("nav a, .menu-list a").forEach(function (a) {
+                    a.classList.toggle("active", a.getAttribute("href") === "#" + name);
+                });
+
+                menuBtn.classList.toggle("current", ["services", "projects", "skills", "passion", "contact"].indexOf(name) !== -1);
+
+                window.scrollTo(0, 0);
+                closeMenu();
+            }
+
+            menuBtn.addEventListener("click", function (e) {
+                e.stopPropagation();
+                var open = menuList.classList.toggle("open");
+                menuBtn.setAttribute("aria-expanded", open ? "true" : "false");
+            });
+
+            menuList.addEventListener("click", closeMenu);
+
+            document.addEventListener("click", function (e) {
+                if (!menuList.contains(e.target)) { closeMenu(); }
+            });
+
+            document.addEventListener("keydown", function (e) {
+                if (e.key === "Escape") { closeMenu(); menuBtn.focus(); }
+            });
+
+            window.addEventListener("hashchange", showPage);
+            showPage();
+        })();
+    </script>
+
+    <script>
+        const form = document.getElementById("contact-form");
+        const statusBox = document.getElementById("form-status");
+
+        form.addEventListener("submit", async function (e) {
+            e.preventDefault();
+            const button = form.querySelector("button");
+            button.disabled = true;
+            statusBox.className = "";
+            statusBox.textContent = "Sending...";
+
+            try {
+                const response = await fetch(form.action, {
+                    method: "POST",
+                    body: new FormData(form),
+                    headers: { "Accept": "application/json" }
+                });
+
+                if (response.ok) {
+                    form.reset();
+                    statusBox.className = "ok";
+                    statusBox.textContent = "Message sent. I will reply to your email soon.";
+                } else {
+                    throw new Error("Request failed");
+                }
+            } catch (err) {
+                statusBox.className = "error";
+                statusBox.textContent = "Your message was not sent. Please email me directly at jeffwaithaka802@gmail.com.";
+            }
+
+            button.disabled = false;
+        });
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,693 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+    scroll-padding-top:90px;
+}
+
+body{
+    background:#021111;
+    color:white;
+    font-family:Arial, sans-serif;
+    overflow-x:hidden;
+}
+
+
+/* ANIMATED BACKGROUND */
+
+#bg-canvas{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    z-index:0;
+    opacity:0.28;
+    pointer-events:none;
+}
+
+.typing-line{
+    margin-top:20px;
+    font-family:"Courier New", monospace;
+    font-size:26px;
+    color:#00ffff;
+    min-height:34px;
+}
+
+.typing-line .prompt{
+    color:#7cffb2;
+}
+
+.caret{
+    display:inline-block;
+    width:12px;
+    height:26px;
+    margin-left:4px;
+    vertical-align:text-bottom;
+    background:#00ffff;
+    animation:blink 1s steps(1) infinite;
+}
+
+@keyframes blink{
+    50%{ opacity:0; }
+}
+
+@media (prefers-reduced-motion: reduce){
+    .caret{ animation:none; }
+}
+
+section,
+footer{
+    position:relative;
+    z-index:1;
+}
+
+
+header{
+    width:100%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:25px 10%;
+    position:fixed;
+    top:0;
+    background:#021111;
+    z-index:1000;
+}
+
+.logo{
+    font-size:30px;
+    font-weight:bold;
+    color:#00ffff;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin-left:25px;
+    font-size:18px;
+    transition:0.3s;
+}
+
+nav a:hover{
+    color:#00ffff;
+}
+
+
+/* HERO */
+
+.hero{
+    width:100%;
+    min-height:100vh;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:120px 10%;
+}
+
+.hero-text{
+    width:50%;
+}
+
+.hero-text h1{
+    font-size:70px;
+    line-height:1.2;
+}
+
+.hero-text p{
+    margin-top:25px;
+    color:#cccccc;
+    width:80%;
+    line-height:1.8;
+    font-size:20px;
+}
+
+
+.buttons{
+    margin-top:40px;
+}
+
+.contact-btn,
+.hire-btn{
+    padding:14px 35px;
+    border-radius:8px;
+    text-decoration:none;
+    font-weight:bold;
+    display:inline-block;
+    margin-right:15px;
+    margin-bottom:12px;
+    transition:0.3s;
+    font-size:16px;
+    font-family:inherit;
+    cursor:pointer;
+}
+
+.contact-btn{
+    background:#00ffff;
+    color:black;
+    border:2px solid #00ffff;
+}
+
+.contact-btn:hover{
+    transform:translateY(-5px);
+}
+
+.hire-btn{
+    border:2px solid #00ffff;
+    color:#00ffff;
+}
+
+.hire-btn:hover{
+    background:#00ffff;
+    color:black;
+}
+
+
+.socials{
+    margin-top:30px;
+}
+
+.socials a{
+    text-decoration:none;
+}
+
+.socials i{
+    width:50px;
+    height:50px;
+    background:#00ffff;
+    color:black;
+    text-align:center;
+    line-height:50px;
+    border-radius:50%;
+    margin-right:15px;
+    font-size:20px;
+    transition:0.3s;
+}
+
+.socials i:hover{
+    transform:scale(1.1);
+}
+
+
+.hero-image{
+    width:40%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    position:relative;
+}
+
+.circle{
+    width:360px;
+    height:500px;
+    border:4px solid #00ffff;
+    border-radius:20px;
+    position:absolute;
+    box-shadow:0 0 40px #00ffff;
+}
+
+.hero-image img{
+    width:320px;
+    height:430px;
+    object-fit:contain;
+    object-position:center top;
+    border-radius:20px;
+    z-index:1;
+    position:relative;
+    background:black;
+}
+
+
+/* SERVICES */
+
+.services-section{
+    padding:100px 10%;
+}
+
+.services-section h2,
+.projects-section h2,
+.skills-section h2{
+    font-size:50px;
+    color:#00ffff;
+    margin-bottom:40px;
+    text-align:center;
+}
+
+.service-box{
+    background:#071111;
+    padding:30px;
+    margin-bottom:25px;
+    border-radius:12px;
+    border:1px solid #00ffff;
+    transition:0.3s;
+}
+
+.service-box:hover{
+    transform:translateY(-5px);
+    box-shadow:0 0 20px #00ffff;
+}
+
+.service-box h3{
+    margin-bottom:15px;
+}
+
+
+/* PROJECTS */
+
+.projects-section{
+    padding:100px 10%;
+}
+
+.project{
+    display:flex;
+    gap:25px;
+    align-items:center;
+    background:#071111;
+    padding:22px;
+    margin-bottom:25px;
+    border-radius:12px;
+    border:1px solid #00ffff;
+    transition:0.3s;
+}
+
+.project:hover{
+    transform:translateY(-5px);
+    box-shadow:0 0 20px #00ffff;
+}
+
+.thumb{
+    position:relative;
+    flex:0 0 150px;
+    height:110px;
+    border-radius:10px;
+    overflow:hidden;
+    background:#021111;
+    border:1px solid #0b3a3a;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.thumb i{
+    font-size:38px;
+    color:#00ffff;
+}
+
+.thumb img{
+    position:absolute;
+    inset:0;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.project-info h3{
+    margin-bottom:10px;
+    font-size:20px;
+}
+
+.project-info p{
+    color:#cccccc;
+    line-height:1.7;
+    font-size:16px;
+}
+
+.tags{
+    display:flex;
+    flex-wrap:wrap;
+    gap:8px;
+    margin-top:14px;
+}
+
+.tags b{
+    font-weight:normal;
+    font-size:14px;
+    color:#00ffff;
+    border:1px solid #00ffff;
+    border-radius:20px;
+    padding:4px 14px;
+}
+
+
+/* SKILLS */
+
+.skills-section{
+    padding:100px 10%;
+}
+
+.skills-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));
+    gap:25px;
+}
+
+.skill-group{
+    background:#071111;
+    padding:28px;
+    border-radius:12px;
+    border:1px solid #00ffff;
+}
+
+.skill-group h3{
+    font-size:20px;
+}
+
+.skill-group .tags{
+    margin-top:18px;
+}
+
+
+/* CONTACT */
+
+.contact-section{
+    padding:100px 10%;
+    text-align:center;
+}
+
+.contact-section h2{
+    font-size:50px;
+    color:#00ffff;
+    margin-bottom:30px;
+}
+
+.contact-section p{
+    margin-bottom:15px;
+    font-size:22px;
+}
+
+.contact-section a{
+    color:white;
+}
+
+.contact-form{
+    max-width:600px;
+    margin:50px auto 0;
+    text-align:left;
+}
+
+.contact-form label{
+    display:block;
+    margin-bottom:8px;
+    font-size:16px;
+    color:#cccccc;
+}
+
+.contact-form input,
+.contact-form textarea{
+    width:100%;
+    padding:14px;
+    margin-bottom:22px;
+    background:#071111;
+    color:white;
+    border:1px solid #00ffff;
+    border-radius:8px;
+    font-size:16px;
+    font-family:inherit;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus,
+.contact-btn:focus-visible,
+.hire-btn:focus-visible{
+    outline:3px solid #00ffff;
+    outline-offset:2px;
+}
+
+.contact-form textarea{
+    resize:vertical;
+}
+
+.contact-form button:disabled{
+    opacity:0.6;
+    cursor:wait;
+}
+
+.contact-form #form-status{
+    margin:10px 0 0;
+    font-size:16px;
+    min-height:24px;
+}
+
+#form-status.ok{
+    color:#00ff99;
+}
+
+#form-status.error{
+    color:#ff7a7a;
+}
+
+
+/* FOOTER */
+
+footer{
+    text-align:center;
+    padding:20px;
+    background:#000;
+    color:#00ffff;
+}
+
+
+/* RESPONSIVE */
+
+@media(max-width:900px){
+
+    header{
+        flex-direction:column;
+        padding:15px 5%;
+    }
+
+    .logo{
+        font-size:24px;
+    }
+
+    nav{
+        margin-top:12px;
+        display:flex;
+        flex-wrap:wrap;
+        justify-content:center;
+        gap:6px 0;
+    }
+
+    nav a{
+        margin:0 10px;
+        font-size:16px;
+    }
+
+    html{
+        scroll-padding-top:130px;
+    }
+
+    .hero{
+        flex-direction:column;
+        text-align:center;
+        padding-top:170px;
+    }
+
+    .hero-text{
+        width:100%;
+    }
+
+    .hero-text p{
+        width:100%;
+    }
+
+    .hero-image{
+        width:100%;
+        margin-top:50px;
+    }
+
+    .hero-text h1{
+        font-size:50px;
+    }
+
+    .project{
+        flex-direction:column;
+        align-items:flex-start;
+    }
+
+    .thumb{
+        flex:none;
+        width:100%;
+        height:170px;
+    }
+
+    .services-section h2,
+    .projects-section h2,
+    .skills-section h2,
+    .contact-section h2{
+        font-size:38px;
+    }
+}
+
+
+/* MENU AND SEPARATE PAGES */
+
+a.logo{
+    text-decoration:none;
+}
+
+nav{
+    display:flex;
+    align-items:center;
+}
+
+nav a.active,
+.menu-btn.current{
+    color:#00ffff;
+}
+
+.menu{
+    position:relative;
+    margin-left:25px;
+}
+
+.menu-btn{
+    background:none;
+    border:2px solid #00ffff;
+    color:white;
+    padding:8px 18px;
+    border-radius:8px;
+    font-size:18px;
+    font-family:inherit;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.menu-btn:hover,
+.menu-btn[aria-expanded="true"]{
+    background:#00ffff;
+    color:black;
+}
+
+.menu-btn:focus-visible,
+.menu-list a:focus-visible,
+nav a:focus-visible{
+    outline:3px solid #00ffff;
+    outline-offset:2px;
+}
+
+.menu-list{
+    position:absolute;
+    top:calc(100% + 12px);
+    right:0;
+    min-width:190px;
+    background:#071111;
+    border:1px solid #00ffff;
+    border-radius:12px;
+    box-shadow:0 0 20px rgba(0,255,255,0.35);
+    overflow:hidden;
+    z-index:1100;
+}
+
+.menu-list a{
+    display:block;
+    margin:0;
+    padding:14px 22px;
+    font-size:18px;
+}
+
+.menu-list a:hover{
+    background:#0b2a2a;
+}
+
+.js .menu-list{
+    display:none;
+}
+
+.js .menu-list.open{
+    display:block;
+}
+
+/* Each section is its own page */
+.js .page{
+    display:none;
+}
+
+.js .page.active{
+    display:block;
+}
+
+.js .hero.page.active{
+    display:flex;
+}
+
+.page.section-page{
+    min-height:100vh;
+    padding-top:140px;
+}
+
+@media(max-width:900px){
+
+    nav{
+        justify-content:center;
+    }
+
+    .menu{
+        margin-left:10px;
+    }
+
+    .menu-btn{
+        font-size:16px;
+        padding:6px 14px;
+    }
+
+    .menu-list a{
+        font-size:16px;
+    }
+
+    .page.section-page{
+        padding-top:170px;
+    }
+}
+
+
+/* PASSION */
+
+.passion-section{
+    padding:100px 10%;
+}
+
+.passion-section h2{
+    font-size:50px;
+    color:#00ffff;
+    margin-bottom:40px;
+    text-align:center;
+}
+
+.passion-box{
+    max-width:850px;
+    margin:0 auto;
+    background:#071111;
+    border:1px solid #00ffff;
+    border-radius:12px;
+    padding:40px;
+}
+
+.passion-box p{
+    font-size:20px;
+    line-height:1.9;
+    color:#dddddd;
+}
+
+.passion-box p + p{
+    margin-top:26px;
+}
+
+@media(max-width:900px){
+
+    .passion-section h2{
+        font-size:38px;
+    }
+
+    .passion-box{
+        padding:26px;
+    }
+
+    .passion-box p{
+        font-size:18px;
+    }
+}
